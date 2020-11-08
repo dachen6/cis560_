@@ -12,9 +12,28 @@ namespace Cis560_proj
 {
     public partial class Form1 : Form
     {
+
+        List<Customers> customers = new List<Customers>();
         public Form1()
         {
             InitializeComponent();
+
+            customers_foundlb.DataSource = customers;
+
+            customers_foundlb.DisplayMember = "FullInfo";
+        }
+
+        private void search_Click(object sender, EventArgs e)
+        {
+            dataAccess db = new dataAccess();
+
+            customers = db.Getcus(lastName.Text);
+
+            customers_foundlb.Refresh();
+
+            customers_foundlb.DataSource = customers;
+
+            customers_foundlb.DisplayMember = "FullInfo";
         }
     }
 }
