@@ -31,7 +31,7 @@ namespace Cis560_proj
             SqlDataReader dataReader;
             string sql, output = "";
 
-            sql = "select CustomerID,name from Proj.Customers";
+            sql = "select C.Tel,S.StartData from proj.Customers C INNER JOIN Proj.ResideRecords S ON C.CustomerID = S.CustomerID; ";
             
 
 

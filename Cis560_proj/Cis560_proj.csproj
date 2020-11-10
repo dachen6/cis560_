@@ -50,14 +50,74 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addapart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addapart.Designer.cs">
+      <DependentUpon>addapart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="begincs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="begincs.Designer.cs">
+      <DependentUpon>begincs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CusPagecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CusPagecs.Designer.cs">
+      <DependentUpon>CusPagecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customer_logcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customer_logcs.Designer.cs">
+      <DependentUpon>customer_logcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="More.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="More.Designer.cs">
+      <DependentUpon>More.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="score.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="score.Designer.cs">
+      <DependentUpon>score.cs</DependentUpon>
+    </Compile>
+    <Compile Include="search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="search.Designer.cs">
+      <DependentUpon>search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Signup.Designer.cs">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addapart.resx">
+      <DependentUpon>addapart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="begincs.resx">
+      <DependentUpon>begincs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CusPagecs.resx">
+      <DependentUpon>CusPagecs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer_logcs.resx">
+      <DependentUpon>customer_logcs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -70,6 +130,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="score.resx">
+      <DependentUpon>score.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="search.resx">
+      <DependentUpon>search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Signup.resx">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
