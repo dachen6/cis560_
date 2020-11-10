@@ -15,16 +15,16 @@ namespace Cis560_proj
         public addapart()
         {
             InitializeComponent();
-            country.Items.Add("Dodge_city");
-            country.Items.Add("Garden_city");
-            country.Items.Add("Haysville");
-            country.Items.Add("Kansas_city");
-            country.Items.Add("Emporia");
-            country.Items.Add("Olathe");
-            country.Items.Add("Salina");
-            country.Items.Add("Topeka");
-            country.Items.Add("Lawrence");
-            country.Items.Add("Manhattan");
+            ux_City.Items.Add("Dodge_city");
+            ux_City.Items.Add("Garden_city");
+            ux_City.Items.Add("Haysville");
+            ux_City.Items.Add("Kansas_city");
+            ux_City.Items.Add("Emporia");
+            ux_City.Items.Add("Olathe");
+            ux_City.Items.Add("Salina");
+            ux_City.Items.Add("Topeka");
+            ux_City.Items.Add("Lawrence");
+            ux_City.Items.Add("Manhattan");
         }
 
         private void TextBox10_TextChanged(object sender, EventArgs e)

@@ -16,5 +16,15 @@ namespace Cis560_proj
         {
             InitializeComponent();
         }
+
+        private void Ux_ScoreReturn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Ux_ScoreOK_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

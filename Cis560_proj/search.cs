@@ -21,5 +21,11 @@ namespace Cis560_proj
         {
 
         }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

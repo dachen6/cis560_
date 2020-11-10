@@ -28,45 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dropmonth = new System.Windows.Forms.CheckedListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ux_ScoreDropMonth = new System.Windows.Forms.CheckedListBox();
+            this.ux_ScoreOK = new System.Windows.Forms.Button();
+            this.ux_ScoreReturn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // dropmonth
+            // ux_ScoreDropMonth
             // 
-            this.dropmonth.FormattingEnabled = true;
-            this.dropmonth.Location = new System.Drawing.Point(95, 35);
-            this.dropmonth.Name = "dropmonth";
-            this.dropmonth.Size = new System.Drawing.Size(120, 94);
-            this.dropmonth.TabIndex = 0;
+            this.ux_ScoreDropMonth.FormattingEnabled = true;
+            this.ux_ScoreDropMonth.Location = new System.Drawing.Point(95, 35);
+            this.ux_ScoreDropMonth.Name = "ux_ScoreDropMonth";
+            this.ux_ScoreDropMonth.Size = new System.Drawing.Size(120, 94);
+            this.ux_ScoreDropMonth.TabIndex = 0;
             // 
-            // button1
+            // ux_ScoreOK
             // 
-            this.button1.Location = new System.Drawing.Point(363, 198);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ux_ScoreOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ux_ScoreOK.Location = new System.Drawing.Point(541, 371);
+            this.ux_ScoreOK.Name = "ux_ScoreOK";
+            this.ux_ScoreOK.Size = new System.Drawing.Size(83, 38);
+            this.ux_ScoreOK.TabIndex = 1;
+            this.ux_ScoreOK.Text = "OK";
+            this.ux_ScoreOK.UseVisualStyleBackColor = true;
+            this.ux_ScoreOK.Click += new System.EventHandler(this.Ux_ScoreOK_Click);
             // 
-            // button2
+            // ux_ScoreReturn
             // 
-            this.button2.Location = new System.Drawing.Point(620, 365);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ux_ScoreReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ux_ScoreReturn.Location = new System.Drawing.Point(666, 371);
+            this.ux_ScoreReturn.Name = "ux_ScoreReturn";
+            this.ux_ScoreReturn.Size = new System.Drawing.Size(81, 38);
+            this.ux_ScoreReturn.TabIndex = 2;
+            this.ux_ScoreReturn.Text = "Return";
+            this.ux_ScoreReturn.UseVisualStyleBackColor = true;
+            this.ux_ScoreReturn.Click += new System.EventHandler(this.Ux_ScoreReturn_Click);
             // 
             // score
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dropmonth);
+            this.Controls.Add(this.ux_ScoreReturn);
+            this.Controls.Add(this.ux_ScoreOK);
+            this.Controls.Add(this.ux_ScoreDropMonth);
             this.Name = "score";
             this.Text = "score";
             this.ResumeLayout(false);
@@ -75,8 +79,8 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckedListBox dropmonth;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.CheckedListBox ux_ScoreDropMonth;
+        private System.Windows.Forms.Button ux_ScoreOK;
+        private System.Windows.Forms.Button ux_ScoreReturn;
     }
 }

@@ -16,5 +16,12 @@ namespace Cis560_proj
         {
             InitializeComponent();
         }
+
+        private void Ux_MoreReturn_Click(object sender, EventArgs e)
+        {
+            Form bs = new begincs();
+            bs.ShowDialog();
+            this.Hide();
+        }
     }
 }
