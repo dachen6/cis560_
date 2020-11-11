@@ -19,12 +19,6 @@ namespace Cis560_proj
             InitializeComponent();
         }
 
-        private void Lease_Click(object sender, EventArgs e)
-        {
-            addapart aa = new addapart();
-            aa.Show();
-            this.Hide();
-        }
 
         private void Rent_Click(object sender, EventArgs e)
         {
@@ -37,6 +31,13 @@ namespace Cis560_proj
         {
             More m = new More();
             m.Show();
+            this.Hide();
+        }
+
+        private void ux_BeginLease_Click(object sender, EventArgs e)
+        {
+            addapart aa = new addapart();
+            aa.Show();
             this.Hide();
         }
     }

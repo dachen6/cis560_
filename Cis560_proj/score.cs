@@ -26,5 +26,10 @@ namespace Cis560_proj
         {
 
         }
+
+        private void score_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

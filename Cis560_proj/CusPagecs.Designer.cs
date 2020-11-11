@@ -49,7 +49,7 @@
             this.ux_CusApartmentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_CusApartmentID.Location = new System.Drawing.Point(237, 46);
             this.ux_CusApartmentID.Name = "ux_CusApartmentID";
-            this.ux_CusApartmentID.Size = new System.Drawing.Size(151, 30);
+            this.ux_CusApartmentID.Size = new System.Drawing.Size(151, 26);
             this.ux_CusApartmentID.TabIndex = 1;
             // 
             // label1
@@ -58,7 +58,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(52, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 25);
+            this.label1.Size = new System.Drawing.Size(148, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Enrer ApartmentID:";
             // 
@@ -71,6 +71,7 @@
             this.ux_CusReturn.TabIndex = 3;
             this.ux_CusReturn.Text = "Return";
             this.ux_CusReturn.UseVisualStyleBackColor = true;
+            this.ux_CusReturn.Click += new System.EventHandler(this.ux_CusReturn_Click);
             // 
             // CusPagecs
             // 

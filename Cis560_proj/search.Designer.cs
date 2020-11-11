@@ -52,6 +52,8 @@
             this.ux_SearchTimeToStation = new System.Windows.Forms.ComboBox();
             this.ux_SearchReturnButton = new System.Windows.Forms.Button();
             this.ux_SelectLogin = new System.Windows.Forms.Button();
+            this.selectnum = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ux_SearchResultTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,7 +95,7 @@
             this.ux_SearchWithBalcony.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_SearchWithBalcony.Location = new System.Drawing.Point(35, 233);
             this.ux_SearchWithBalcony.Name = "ux_SearchWithBalcony";
-            this.ux_SearchWithBalcony.Size = new System.Drawing.Size(144, 29);
+            this.ux_SearchWithBalcony.Size = new System.Drawing.Size(116, 24);
             this.ux_SearchWithBalcony.TabIndex = 8;
             this.ux_SearchWithBalcony.Text = "WithBalcony";
             this.ux_SearchWithBalcony.UseVisualStyleBackColor = true;
@@ -104,7 +106,7 @@
             this.ux_SearchWithWasherDryer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_SearchWithWasherDryer.Location = new System.Drawing.Point(185, 233);
             this.ux_SearchWithWasherDryer.Name = "ux_SearchWithWasherDryer";
-            this.ux_SearchWithWasherDryer.Size = new System.Drawing.Size(190, 29);
+            this.ux_SearchWithWasherDryer.Size = new System.Drawing.Size(153, 24);
             this.ux_SearchWithWasherDryer.TabIndex = 9;
             this.ux_SearchWithWasherDryer.Text = "WithWasherDryer";
             this.ux_SearchWithWasherDryer.UseVisualStyleBackColor = true;
@@ -115,7 +117,7 @@
             this.ux_SearchPetFriendly.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_SearchPetFriendly.Location = new System.Drawing.Point(381, 233);
             this.ux_SearchPetFriendly.Name = "ux_SearchPetFriendly";
-            this.ux_SearchPetFriendly.Size = new System.Drawing.Size(132, 29);
+            this.ux_SearchPetFriendly.Size = new System.Drawing.Size(107, 24);
             this.ux_SearchPetFriendly.TabIndex = 10;
             this.ux_SearchPetFriendly.Text = "PetFriendly";
             this.ux_SearchPetFriendly.UseVisualStyleBackColor = true;
@@ -126,7 +128,7 @@
             this.ux_SearchWithGym.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_SearchWithGym.Location = new System.Drawing.Point(519, 233);
             this.ux_SearchWithGym.Name = "ux_SearchWithGym";
-            this.ux_SearchWithGym.Size = new System.Drawing.Size(115, 29);
+            this.ux_SearchWithGym.Size = new System.Drawing.Size(93, 24);
             this.ux_SearchWithGym.TabIndex = 11;
             this.ux_SearchWithGym.Text = "WithGym";
             this.ux_SearchWithGym.UseVisualStyleBackColor = true;
@@ -137,11 +139,10 @@
             this.ux_SearchWithPool.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_SearchWithPool.Location = new System.Drawing.Point(640, 233);
             this.ux_SearchWithPool.Name = "ux_SearchWithPool";
-            this.ux_SearchWithPool.Size = new System.Drawing.Size(113, 29);
+            this.ux_SearchWithPool.Size = new System.Drawing.Size(91, 24);
             this.ux_SearchWithPool.TabIndex = 12;
             this.ux_SearchWithPool.Text = "WithPool";
             this.ux_SearchWithPool.UseVisualStyleBackColor = true;
-            this.ux_SearchWithPool.CheckedChanged += new System.EventHandler(this.CheckBox5_CheckedChanged);
             // 
             // ux_SearchResultTable
             // 
@@ -161,6 +162,7 @@
             this.ux_SearchSelectButton.TabIndex = 14;
             this.ux_SearchSelectButton.Text = "Select";
             this.ux_SearchSelectButton.UseVisualStyleBackColor = true;
+            this.ux_SearchSelectButton.Click += new System.EventHandler(this.ux_SearchSelectButton_Click);
             // 
             // SelectPriceLable
             // 
@@ -168,7 +170,7 @@
             this.SelectPriceLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectPriceLable.Location = new System.Drawing.Point(30, 30);
             this.SelectPriceLable.Name = "SelectPriceLable";
-            this.SelectPriceLable.Size = new System.Drawing.Size(62, 25);
+            this.SelectPriceLable.Size = new System.Drawing.Size(48, 20);
             this.SelectPriceLable.TabIndex = 15;
             this.SelectPriceLable.Text = "Price:";
             // 
@@ -178,10 +180,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(204, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 25);
+            this.label1.Size = new System.Drawing.Size(14, 20);
             this.label1.TabIndex = 16;
             this.label1.Text = "-";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // ux_SearchAverableMonth
             // 
@@ -204,7 +205,7 @@
             "Dec."});
             this.ux_SearchAverableMonth.Location = new System.Drawing.Point(590, 24);
             this.ux_SearchAverableMonth.Name = "ux_SearchAverableMonth";
-            this.ux_SearchAverableMonth.Size = new System.Drawing.Size(121, 33);
+            this.ux_SearchAverableMonth.Size = new System.Drawing.Size(121, 28);
             this.ux_SearchAverableMonth.TabIndex = 17;
             // 
             // label2
@@ -213,7 +214,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(411, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 25);
+            this.label2.Size = new System.Drawing.Size(124, 20);
             this.label2.TabIndex = 18;
             this.label2.Text = "Averable Month:";
             // 
@@ -223,7 +224,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(393, 87);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(235, 25);
+            this.label3.Size = new System.Drawing.Size(190, 20);
             this.label3.TabIndex = 19;
             this.label3.Text = "//those two boxes usefor?";
             // 
@@ -233,7 +234,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(30, 140);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 25);
+            this.label4.Size = new System.Drawing.Size(95, 20);
             this.label4.TabIndex = 20;
             this.label4.Text = "Num of bed:";
             // 
@@ -247,7 +248,7 @@
             "3"});
             this.ux_SearchBedNum.Location = new System.Drawing.Point(154, 137);
             this.ux_SearchBedNum.Name = "ux_SearchBedNum";
-            this.ux_SearchBedNum.Size = new System.Drawing.Size(121, 33);
+            this.ux_SearchBedNum.Size = new System.Drawing.Size(121, 28);
             this.ux_SearchBedNum.TabIndex = 21;
             // 
             // label5
@@ -256,7 +257,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(303, 140);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 25);
+            this.label5.Size = new System.Drawing.Size(39, 20);
             this.label5.TabIndex = 22;
             this.label5.Text = "City:";
             // 
@@ -277,7 +278,7 @@
             "Manhattan"});
             this.ux_SearchCityName.Location = new System.Drawing.Point(361, 137);
             this.ux_SearchCityName.Name = "ux_SearchCityName";
-            this.ux_SearchCityName.Size = new System.Drawing.Size(121, 33);
+            this.ux_SearchCityName.Size = new System.Drawing.Size(121, 28);
             this.ux_SearchCityName.TabIndex = 23;
             // 
             // label6
@@ -286,7 +287,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(30, 185);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(182, 25);
+            this.label6.Size = new System.Drawing.Size(147, 20);
             this.label6.TabIndex = 24;
             this.label6.Text = "Time to bus station:";
             // 
@@ -302,7 +303,7 @@
             "more than 15 min."});
             this.ux_SearchTimeToStation.Location = new System.Drawing.Point(218, 182);
             this.ux_SearchTimeToStation.Name = "ux_SearchTimeToStation";
-            this.ux_SearchTimeToStation.Size = new System.Drawing.Size(121, 33);
+            this.ux_SearchTimeToStation.Size = new System.Drawing.Size(121, 28);
             this.ux_SearchTimeToStation.TabIndex = 25;
             // 
             // ux_SearchReturnButton
@@ -314,6 +315,7 @@
             this.ux_SearchReturnButton.TabIndex = 26;
             this.ux_SearchReturnButton.Text = "return";
             this.ux_SearchReturnButton.UseVisualStyleBackColor = true;
+            this.ux_SearchReturnButton.Click += new System.EventHandler(this.ux_SearchReturnButton_Click);
             // 
             // ux_SelectLogin
             // 
@@ -325,11 +327,31 @@
             this.ux_SelectLogin.Text = "Login";
             this.ux_SelectLogin.UseVisualStyleBackColor = true;
             // 
+            // selectnum
+            // 
+            this.selectnum.Location = new System.Drawing.Point(281, 281);
+            this.selectnum.Multiline = true;
+            this.selectnum.Name = "selectnum";
+            this.selectnum.Size = new System.Drawing.Size(100, 25);
+            this.selectnum.TabIndex = 28;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(31, 92);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 20);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "score:";
+            // 
             // search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 790);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.selectnum);
             this.Controls.Add(this.ux_SelectLogin);
             this.Controls.Add(this.ux_SearchReturnButton);
             this.Controls.Add(this.ux_SearchTimeToStation);
@@ -388,5 +410,7 @@
         private System.Windows.Forms.ComboBox ux_SearchTimeToStation;
         private System.Windows.Forms.Button ux_SearchReturnButton;
         private System.Windows.Forms.Button ux_SelectLogin;
+        private System.Windows.Forms.TextBox selectnum;
+        private System.Windows.Forms.Label label7;
     }
 }

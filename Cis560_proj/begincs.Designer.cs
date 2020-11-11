@@ -53,7 +53,7 @@
             this.ux_BeginLease.TabIndex = 3;
             this.ux_BeginLease.Text = "lease";
             this.ux_BeginLease.UseVisualStyleBackColor = true;
-            this.ux_BeginLease.Click += new System.EventHandler(this.Lease_Click);
+            this.ux_BeginLease.Click += new System.EventHandler(this.ux_BeginLease_Click);
             // 
             // ux_BeginMore
             // 

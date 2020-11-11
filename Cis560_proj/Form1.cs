@@ -30,6 +30,8 @@ namespace Cis560_proj
             SqlCommand command;
             SqlDataReader dataReader;
             string sql, output = "";
+            
+
 
             sql = "select C.Tel,S.StartData from proj.Customers C INNER JOIN Proj.ResideRecords S ON C.CustomerID = S.CustomerID; ";
             
@@ -74,6 +76,11 @@ namespace Cis560_proj
           
             command.Dispose();
             cnn.Close();
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }

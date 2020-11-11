@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Cis560_proj
 {
@@ -47,6 +49,52 @@ namespace Cis560_proj
             begincs b = new begincs();
             b.Show();
             this.Hide();
+        }
+
+        private void ux_AptSubmit_Click(object sender, EventArgs e)
+        {
+            string name = ux_AptOwnerName.Text;
+            string email = ux_AptOwnerEmail.Text;
+            string tel = ux_AptOwnerTel.Text;
+            string city = ux_City.Text;
+            string street = ux_AptStreet.Text;
+            string aptnum = ux_AptAptNum.Text;
+            string numbed = ux_AptBedNum.Text;
+            string numbeth = ux_AptBathNum.Text;
+            string monthrent = ux_AptMonthRent.Text;
+            string deposit = ux_AptDeposit.Text;
+            string sizesqf = ux_AptSizesqf.Text;
+            string averiabletime = ux_AptAvailTime.Text;
+            string Follortypr = ux_AptFloorType.Text;
+            string floorcolor = ux_AptFloorColor.Text;
+            string carprttype = ux_AptCarpetType.Text;
+            string carpetclolor = ux_AptCarpetColor.Text;
+            string numofparking = ux_AptNumOfParking.Text;
+
+
+
+
+            string connetionString;
+            SqlConnection cnn;
+            connetionString = "Server=mssql.cs.ksu.edu;Database=da6;User Id=da6;Password=wanglaoju!2;";
+            cnn = new SqlConnection(connetionString);
+            cnn.Open();
+            
+            SqlCommand command;
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            string sql, output = "";
+
+            sql = "INSERT Proj.Cities(  [CityName] , [State],Country) VALUES (N'aaaaaaaaaaaaaaaaaa', N'KS', N'USA'); ";
+
+
+
+            command = new SqlCommand(sql, cnn);
+            adapter.InsertCommand = new SqlCommand(sql, cnn);
+            adapter.InsertCommand.ExecuteNonQuery();
+            MessageBox.Show(output);
+
+            command.Dispose();
+            cnn.Close();
         }
     }
 }

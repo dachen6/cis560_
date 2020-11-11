@@ -16,5 +16,12 @@ namespace Cis560_proj
         {
             InitializeComponent();
         }
+
+        private void ux_CusReturn_Click(object sender, EventArgs e)
+        {
+            begincs b = new begincs();
+            b.Show();
+            this.Hide();
+        }
     }
 }

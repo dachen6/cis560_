@@ -73,6 +73,7 @@
             this.Controls.Add(this.ux_ScoreDropMonth);
             this.Name = "score";
             this.Text = "score";
+            this.Load += new System.EventHandler(this.score_Load);
             this.ResumeLayout(false);
 
         }
