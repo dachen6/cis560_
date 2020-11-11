@@ -309,7 +309,7 @@
             // ux_SearchReturnButton
             // 
             this.ux_SearchReturnButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ux_SearchReturnButton.Location = new System.Drawing.Point(668, 281);
+            this.ux_SearchReturnButton.Location = new System.Drawing.Point(656, 281);
             this.ux_SearchReturnButton.Name = "ux_SearchReturnButton";
             this.ux_SearchReturnButton.Size = new System.Drawing.Size(75, 35);
             this.ux_SearchReturnButton.TabIndex = 26;
