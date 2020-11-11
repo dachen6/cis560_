@@ -35,7 +35,7 @@ namespace Cis560_proj
         private void Ux_LogSignIn_Click(object sender, EventArgs e)
         {
             string email = "N'" + ux_LogUserEmail.Text + "'";
-            string password = "N'" + ux_LogPassword.Text + "'";
+            string password =  ux_LogPassword.Text;
 
 
             string connetionString;
@@ -49,8 +49,8 @@ namespace Cis560_proj
 
 
 
-            sql = "select * from proj.Customers C where ";
-            sql += "where C.Email = " + email + "C.PasswordHash" + password + ";";
+            sql = "select * from proj.Customers C ";
+            sql += "where C.Email = " + email + "and C.PasswordHash = " + password + ";";
 
 
 
@@ -59,7 +59,7 @@ namespace Cis560_proj
 
             while (dataReader.Read())
             {
-                output =  (string)dataReader.GetValue(0);
+                output =  dataReader.GetValue(0).ToString();
             }
             MessageBox.Show(output);
             dataReader.Close();

@@ -378,6 +378,7 @@
             this.Controls.Add(this.ux_SearchLowPrice);
             this.Name = "search";
             this.Text = "search";
+            this.Load += new System.EventHandler(this.search_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ux_SearchResultTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

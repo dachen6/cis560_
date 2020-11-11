@@ -50,13 +50,22 @@ namespace Cis560_proj
             {
                 string pool = "N'WithWasherDryer'";
             }
+            this.Hide();
+            customer_logcs cl = new customer_logcs();
+            cl.Show();
         }
 
         private void ux_SearchReturnButton_Click(object sender, EventArgs e)
         {
+            this.Hide();
             begincs b = new begincs();
             b.ShowDialog();
-            this.Hide();
+            
+        }
+
+        private void search_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
