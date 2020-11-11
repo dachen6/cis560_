@@ -21,6 +21,27 @@ namespace Cis560_proj
         {
 
 
+            this.Hide();
+            customer_logcs cl = new customer_logcs();
+            cl.Show();
+        }
+
+        private void ux_SearchReturnButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            begincs b = new begincs();
+            b.ShowDialog();
+            
+        }
+
+        private void search_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void result_Click(object sender, EventArgs e)
+        {
+
             string low = "N'" + ux_SearchLowPrice.Text + "'";
             string high = "N'" + ux_SearchHighPrice.Text + "'";
             string month = "N'" + ux_SearchAverableMonth.Text + "'";
@@ -50,21 +71,7 @@ namespace Cis560_proj
             {
                 string pool = "N'WithWasherDryer'";
             }
-            this.Hide();
-            customer_logcs cl = new customer_logcs();
-            cl.Show();
-        }
 
-        private void ux_SearchReturnButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            begincs b = new begincs();
-            b.ShowDialog();
-            
-        }
-
-        private void search_Load(object sender, EventArgs e)
-        {
 
         }
     }

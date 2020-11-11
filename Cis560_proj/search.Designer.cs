@@ -54,6 +54,7 @@
             this.ux_SelectLogin = new System.Windows.Forms.Button();
             this.selectnum = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.result = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ux_SearchResultTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -345,11 +346,23 @@
             this.label7.TabIndex = 29;
             this.label7.Text = "score:";
             // 
+            // result
+            // 
+            this.result.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.result.Location = new System.Drawing.Point(67, 281);
+            this.result.Name = "result";
+            this.result.Size = new System.Drawing.Size(75, 35);
+            this.result.TabIndex = 30;
+            this.result.Text = "Result";
+            this.result.UseVisualStyleBackColor = true;
+            this.result.Click += new System.EventHandler(this.result_Click);
+            // 
             // search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 790);
+            this.Controls.Add(this.result);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.selectnum);
             this.Controls.Add(this.ux_SelectLogin);
@@ -413,5 +426,6 @@
         private System.Windows.Forms.Button ux_SelectLogin;
         private System.Windows.Forms.TextBox selectnum;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button result;
     }
 }
