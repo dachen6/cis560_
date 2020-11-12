@@ -40,12 +40,12 @@ namespace Cis560_proj
         private void result_Click(object sender, EventArgs e)
         {
 
-            string balcony = null;
-            string washdryer = null;
-            string petfriend = null;
-            string gym = null;
-            string pool = null;
-
+            string balcony = "null";
+            string washdryer = "null";
+            string petfriend = "null";
+            string gym = "null";
+            string pool = "null";
+            string bednum = "null";
 
             string low = "N'" + ux_SearchLowPrice.Text + "'";
             if(low.Equals("N''"))
@@ -67,24 +67,28 @@ namespace Cis560_proj
             {
                 score = "null";
             }
-            string bednum = ux_SearchBedNum.Text ;
-            if (bednum.Equals("N''"))
+             bednum = ux_SearchBedNum.Text ;
+            if (bednum.Equals(""))
             {
                 bednum = "null";
             }
+
             string city = "N'" + ux_SearchCityName.Text + "'";
             if (city.Equals("N''"))
             {
                 city = "null";
             }
-            string bus = "N'" + ux_SearchTimeToStation.Text + "'";
-            if (bus.Equals("N''"))
+            string bus =  ux_SearchTimeToStation.Text;
+            if (bus.Equals(""))
             {
                 bus = "null";
             }
             string beth = numbeth.Text;
-
-            string averiableData = "2020-" + ux_SearchAverableMonth.Text + "-" + date.Text;
+            if (beth.Equals(""))
+            {
+                beth = "null";
+            }
+            string averiableData = "'2020-" + ux_SearchAverableMonth.Text + "-" + date.Text+"'";
 
             if (ux_SearchWithBalcony.Checked)
             {
