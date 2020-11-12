@@ -175,7 +175,7 @@ WHERE(C.CityName = " + city + @" OR " + city + @" IS NULL)
    AND(B.TimeToBusStop = " + bus + @" OR " + bus + @" IS NULL)
 ORDER BY ApartmentID, C.CityName, MonthRent ASC";
 
-            MessageBox.Show(q);
+            //MessageBox.Show(q);
 
             SqlCommand cmd = new SqlCommand(q, cnn);
             SqlDataAdapter a = new SqlDataAdapter(cmd);
