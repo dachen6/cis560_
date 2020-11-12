@@ -85,5 +85,10 @@ namespace Cis560_proj
         {
 
         }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

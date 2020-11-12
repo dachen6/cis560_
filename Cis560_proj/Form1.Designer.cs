@@ -49,7 +49,7 @@
             // 
             // lastName
             // 
-            this.lastName.Location = new System.Drawing.Point(335, 92);
+            this.lastName.Location = new System.Drawing.Point(142, 37);
             this.lastName.Name = "lastName";
             this.lastName.Size = new System.Drawing.Size(100, 20);
             this.lastName.TabIndex = 2;
@@ -91,6 +91,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(788, 232);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // Form1
             // 
