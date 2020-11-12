@@ -23,5 +23,10 @@ namespace Cis560_proj
             b.Show();
             this.Hide();
         }
+
+        private void Ux_CusApartmentID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -48,6 +48,7 @@ namespace Cis560_proj
             string bednum = "null";
 
             string low = "N'" + ux_SearchLowPrice.Text + "'";
+
             if(low.Equals("N''"))
             {
                 low = "null";
@@ -90,6 +91,10 @@ namespace Cis560_proj
             }
             string averiableData = "'2020-" + ux_SearchAverableMonth.Text + "-" + date.Text+"'";
 
+            if(ux_SearchAverableMonth.Text == "" || date.Text == "")
+            {
+                averiableData = "null";
+            }
             if (ux_SearchWithBalcony.Checked)
             {
                  balcony = "1";

@@ -51,6 +51,7 @@
             this.ux_CusApartmentID.Name = "ux_CusApartmentID";
             this.ux_CusApartmentID.Size = new System.Drawing.Size(151, 26);
             this.ux_CusApartmentID.TabIndex = 1;
+            this.ux_CusApartmentID.TextChanged += new System.EventHandler(this.Ux_CusApartmentID_TextChanged);
             // 
             // label1
             // 
