@@ -32,13 +32,11 @@
             this.ux_SignUpName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Tel = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.ux_SignUpEmail = new System.Windows.Forms.TextBox();
             this.ux_SignUpTel = new System.Windows.Forms.TextBox();
             this.ux_SignUpPassword = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.ux_SignUpReturn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -51,13 +49,14 @@
             this.ux_SignUpOK.TabIndex = 0;
             this.ux_SignUpOK.Text = "OK";
             this.ux_SignUpOK.UseVisualStyleBackColor = true;
+            this.ux_SignUpOK.Click += new System.EventHandler(this.Ux_SignUpOK_Click);
             // 
             // ux_SignUpName
             // 
             this.ux_SignUpName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_SignUpName.Location = new System.Drawing.Point(199, 49);
             this.ux_SignUpName.Name = "ux_SignUpName";
-            this.ux_SignUpName.Size = new System.Drawing.Size(100, 30);
+            this.ux_SignUpName.Size = new System.Drawing.Size(100, 26);
             this.ux_SignUpName.TabIndex = 1;
             // 
             // label1
@@ -66,7 +65,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(66, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 25);
+            this.label1.Size = new System.Drawing.Size(55, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "Name:";
             // 
@@ -76,16 +75,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(66, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 25);
+            this.label2.Size = new System.Drawing.Size(52, 20);
             this.label2.TabIndex = 7;
             this.label2.Text = "Email:";
-            // 
-            // Tel
-            // 
-            this.Tel.Location = new System.Drawing.Point(199, 314);
-            this.Tel.Name = "Tel";
-            this.Tel.Size = new System.Drawing.Size(100, 20);
-            this.Tel.TabIndex = 2;
             // 
             // label3
             // 
@@ -93,7 +85,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(66, 171);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 25);
+            this.label3.Size = new System.Drawing.Size(34, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Tel:";
             // 
@@ -103,7 +95,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(66, 232);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 25);
+            this.label4.Size = new System.Drawing.Size(82, 20);
             this.label4.TabIndex = 9;
             this.label4.Text = "Password:";
             // 
@@ -112,7 +104,7 @@
             this.ux_SignUpEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_SignUpEmail.Location = new System.Drawing.Point(199, 109);
             this.ux_SignUpEmail.Name = "ux_SignUpEmail";
-            this.ux_SignUpEmail.Size = new System.Drawing.Size(100, 30);
+            this.ux_SignUpEmail.Size = new System.Drawing.Size(100, 26);
             this.ux_SignUpEmail.TabIndex = 10;
             // 
             // ux_SignUpTel
@@ -120,7 +112,7 @@
             this.ux_SignUpTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_SignUpTel.Location = new System.Drawing.Point(199, 168);
             this.ux_SignUpTel.Name = "ux_SignUpTel";
-            this.ux_SignUpTel.Size = new System.Drawing.Size(100, 30);
+            this.ux_SignUpTel.Size = new System.Drawing.Size(100, 26);
             this.ux_SignUpTel.TabIndex = 11;
             // 
             // ux_SignUpPassword
@@ -128,18 +120,8 @@
             this.ux_SignUpPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_SignUpPassword.Location = new System.Drawing.Point(199, 229);
             this.ux_SignUpPassword.Name = "ux_SignUpPassword";
-            this.ux_SignUpPassword.Size = new System.Drawing.Size(100, 30);
+            this.ux_SignUpPassword.Size = new System.Drawing.Size(100, 26);
             this.ux_SignUpPassword.TabIndex = 12;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(66, 309);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 25);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "?????";
             // 
             // ux_SignUpReturn
             // 
@@ -150,6 +132,7 @@
             this.ux_SignUpReturn.TabIndex = 14;
             this.ux_SignUpReturn.Text = "Return";
             this.ux_SignUpReturn.UseVisualStyleBackColor = true;
+            this.ux_SignUpReturn.Click += new System.EventHandler(this.Ux_SignUpReturn_Click);
             // 
             // Signup
             // 
@@ -157,7 +140,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(455, 474);
             this.Controls.Add(this.ux_SignUpReturn);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.ux_SignUpPassword);
             this.Controls.Add(this.ux_SignUpTel);
             this.Controls.Add(this.ux_SignUpEmail);
@@ -165,7 +147,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Tel);
             this.Controls.Add(this.ux_SignUpName);
             this.Controls.Add(this.ux_SignUpOK);
             this.Name = "Signup";
@@ -181,13 +162,11 @@
         private System.Windows.Forms.TextBox ux_SignUpName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox Tel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox ux_SignUpEmail;
         private System.Windows.Forms.TextBox ux_SignUpTel;
         private System.Windows.Forms.TextBox ux_SignUpPassword;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button ux_SignUpReturn;
     }
 }
