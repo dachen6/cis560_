@@ -117,4 +117,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="query_box.Text" xml:space="preserve">
+    <value>
+DECLARE @Rentlo INT = 500,
+        @Renthi INT = 1000,
+		@NumBed INT = 2,
+		@NumBath INT = 1,
+		@AvailableDate DATE = NULL,
+		@CityName NVARCHAR(64) = 'Haysville',
+		@Bus NVARCHAR(64) = NULL,
+		@FeatureA1 INT= 1,
+		@FeatureA2 INT= NULL,
+		@FeatureA3 INT= 3,
+		@FeatureB1 INT= 1,
+		@FeatureB2 INT= NULL;
+
+WITH QCTE(ApartmentID, BuildingID, ReviewCount, AvgReviewScores, AptNumber, NumBed, NumBath, MonthRent, Deposit, Sizesqf, AvailableDate, 
+           NumOfParking, FloorType, FloorColor, CarpetType, CarpetColor) AS
+   (
+      SELECT A.ApartmentID, A.BuildingID, A.ReviewCount, A.AvgReviewScores, A.AptNumber, A.NumBed, A.NumBath, 
+	  A.MonthRent, A.Deposit, A.Sizesqf, A.AvailableDate, A.NumOfParking, A.FloorType, A.FloorColor, A.CarpetType, A.CarpetColor
+      FROM Proj.Apartments A
+         INNER JOIN Proj.Buildings B ON A.BuildingID = B.BuildingID
+      WHERE (@Rentlo &lt;= A.MonthRent and A.MonthRent &lt;= @Renthi OR @Renthi IS NULL)
+         AND (A.NumBed = @NumBed OR @NumBed IS NULL)
+         AND (A.NumBath = @NumBath OR @NumBath IS NULL)
+		 AND (A.AvailableDate &gt;= @AvailableDate OR @AvailableDate IS NULL)
+         AND (((@FeatureA1 IS NULL) AND (@FeatureA2 IS NULL) AND (@FeatureA3 IS NULL)) OR A.ApartmentID IN 
+              (
+               SELECT DISTINCT A1.ApartmentID 
+               FROM Proj.ApartmentFeatures A1
+	              INNER JOIN Proj.ApartmentFeatures A2 ON A1.ApartmentID = A2.ApartmentID
+	              INNER JOIN Proj.ApartmentFeatures A3 ON A2.ApartmentID = A3.ApartmentID
+               WHERE (A1.FeatureAID = @FeatureA1 OR @FeatureA1 IS NULL) 
+			      AND (A2.FeatureAID = @FeatureA2 OR @FeatureA2 IS NULL) 
+			      AND (A3.FeatureAID = @FeatureA3 OR @FeatureA3 IS NULL)
+              ))
+         AND (((@FeatureB1 IS NULL) AND (@FeatureB2 IS NULL)) OR B.BuildingID IN 
+              (
+               SELECT DISTINCT B1.BuildingID 
+               FROM Proj.BuildingFeatures B1
+	              INNER JOIN Proj.BuildingFeatures B2 ON B1.BuildingID = B2.BuildingID
+               WHERE (B1.FeatureBID = @FeatureB1 OR @FeatureB1 IS NULL) 
+			      AND (B2.FeatureBID = @FeatureB2 OR @FeatureB2 IS NULL)
+              ))
+   )
+SELECT Q.ApartmentID AS ApartmentID, B.Address AS Address, CityName AS City, Q.NumBed AS NumOfBedroom, Q.NumBath AS NumOfBathroom, 
+       Q.MonthRent AS MonthRent, Q.AvailableDate AS AvailableDate, Q.AvgReviewScores AS AvgReviewScores, B.TimeToBusStop
+FROM QCTE Q 
+   INNER JOIN Proj.Buildings B ON Q.BuildingID = B.BuildingID
+   INNER JOIN Proj.Cities C ON B.CityID = C.CityID
+WHERE (C.CityName = @CityName OR @CityName IS NULL)
+   AND (B.TimeToBusStop = @Bus OR @Bus IS NULL)
+ORDER BY ApartmentID, C.CityName, MonthRent ASC</value>
+  </data>
 </root>

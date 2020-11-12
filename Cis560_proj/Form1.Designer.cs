@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.lastName = new System.Windows.Forms.TextBox();
             this.search = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.query_box = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -70,11 +74,31 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // query_box
+            // 
+            this.query_box.Location = new System.Drawing.Point(441, 0);
+            this.query_box.Multiline = true;
+            this.query_box.Name = "query_box";
+            this.query_box.Size = new System.Drawing.Size(347, 203);
+            this.query_box.TabIndex = 5;
+            this.query_box.Text = resources.GetString("query_box.Text");
+            this.query_box.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 209);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(788, 232);
+            this.dataGridView1.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.query_box);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.search);
             this.Controls.Add(this.lastName);
@@ -82,6 +106,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,6 +118,8 @@
         private System.Windows.Forms.TextBox lastName;
         private System.Windows.Forms.Button search;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox query_box;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

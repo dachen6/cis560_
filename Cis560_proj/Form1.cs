@@ -61,25 +61,27 @@ namespace Cis560_proj
             connetionString = "Server=mssql.cs.ksu.edu;Database=da6;User Id=da6;Password=wanglaoju!2;";
             cnn = new SqlConnection(connetionString);
             cnn.Open();
-            SqlCommand command;
+           
             SqlDataAdapter adapter = new SqlDataAdapter();
-            string sql, output = "";
+            string q = query_box.Text;
+            SqlCommand cmd = new SqlCommand(q, cnn);
+            SqlDataAdapter a = new SqlDataAdapter(cmd);
+           
+            DataTable dt = new DataTable();
 
-            sql = "INSERT Proj.Cities(  [CityName] , [State],Country) VALUES (N'aaaaaaaaaaaaaaaaaa', N'KS', N'USA'); ";
+            a.SelectCommand = cmd;
+            a.Fill(dt);
 
-
-
-            command = new SqlCommand(sql, cnn);
-            adapter.InsertCommand = new SqlCommand(sql, cnn);
-            adapter.InsertCommand.ExecuteNonQuery();
-            MessageBox.Show(output);
-          
-            command.Dispose();
-            cnn.Close();
-
+            dataGridView1.DataSource = dt;
+            dataGridView1.AutoResizeColumns();
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
