@@ -53,7 +53,7 @@ namespace Cis560_proj
 
 
                 sql = "select * from proj.Customers C ";
-                sql += "where C.Email = " + email + "and C.PasswordHash = " + password + ";";
+                sql += "where C.Email = " + email + " and C.PasswordHash = " + password + ";";
 
 
 

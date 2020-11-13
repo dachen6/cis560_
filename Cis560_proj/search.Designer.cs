@@ -70,7 +70,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(98, 87);
+            this.textBox3.Location = new System.Drawing.Point(98, 92);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 25);
@@ -90,7 +90,7 @@
             this.ux_SearchWithBalcony.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_SearchWithBalcony.Location = new System.Drawing.Point(35, 233);
             this.ux_SearchWithBalcony.Name = "ux_SearchWithBalcony";
-            this.ux_SearchWithBalcony.Size = new System.Drawing.Size(116, 24);
+            this.ux_SearchWithBalcony.Size = new System.Drawing.Size(144, 29);
             this.ux_SearchWithBalcony.TabIndex = 8;
             this.ux_SearchWithBalcony.Text = "WithBalcony";
             this.ux_SearchWithBalcony.UseVisualStyleBackColor = true;
@@ -101,7 +101,7 @@
             this.ux_SearchWithWasherDryer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_SearchWithWasherDryer.Location = new System.Drawing.Point(185, 233);
             this.ux_SearchWithWasherDryer.Name = "ux_SearchWithWasherDryer";
-            this.ux_SearchWithWasherDryer.Size = new System.Drawing.Size(153, 24);
+            this.ux_SearchWithWasherDryer.Size = new System.Drawing.Size(190, 29);
             this.ux_SearchWithWasherDryer.TabIndex = 9;
             this.ux_SearchWithWasherDryer.Text = "WithWasherDryer";
             this.ux_SearchWithWasherDryer.UseVisualStyleBackColor = true;
@@ -112,7 +112,7 @@
             this.ux_SearchPetFriendly.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_SearchPetFriendly.Location = new System.Drawing.Point(381, 233);
             this.ux_SearchPetFriendly.Name = "ux_SearchPetFriendly";
-            this.ux_SearchPetFriendly.Size = new System.Drawing.Size(107, 24);
+            this.ux_SearchPetFriendly.Size = new System.Drawing.Size(132, 29);
             this.ux_SearchPetFriendly.TabIndex = 10;
             this.ux_SearchPetFriendly.Text = "PetFriendly";
             this.ux_SearchPetFriendly.UseVisualStyleBackColor = true;
@@ -123,7 +123,7 @@
             this.ux_SearchWithGym.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_SearchWithGym.Location = new System.Drawing.Point(519, 233);
             this.ux_SearchWithGym.Name = "ux_SearchWithGym";
-            this.ux_SearchWithGym.Size = new System.Drawing.Size(93, 24);
+            this.ux_SearchWithGym.Size = new System.Drawing.Size(115, 29);
             this.ux_SearchWithGym.TabIndex = 11;
             this.ux_SearchWithGym.Text = "WithGym";
             this.ux_SearchWithGym.UseVisualStyleBackColor = true;
@@ -134,7 +134,7 @@
             this.ux_SearchWithPool.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_SearchWithPool.Location = new System.Drawing.Point(640, 233);
             this.ux_SearchWithPool.Name = "ux_SearchWithPool";
-            this.ux_SearchWithPool.Size = new System.Drawing.Size(91, 24);
+            this.ux_SearchWithPool.Size = new System.Drawing.Size(113, 29);
             this.ux_SearchWithPool.TabIndex = 12;
             this.ux_SearchWithPool.Text = "WithPool";
             this.ux_SearchWithPool.UseVisualStyleBackColor = true;
@@ -165,7 +165,7 @@
             this.SelectPriceLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectPriceLable.Location = new System.Drawing.Point(30, 30);
             this.SelectPriceLable.Name = "SelectPriceLable";
-            this.SelectPriceLable.Size = new System.Drawing.Size(48, 20);
+            this.SelectPriceLable.Size = new System.Drawing.Size(62, 25);
             this.SelectPriceLable.TabIndex = 15;
             this.SelectPriceLable.Text = "Price:";
             // 
@@ -175,13 +175,14 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(204, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(14, 20);
+            this.label1.Size = new System.Drawing.Size(19, 25);
             this.label1.TabIndex = 16;
             this.label1.Text = "-";
             // 
             // ux_SearchAverableMonth
             // 
             this.ux_SearchAverableMonth.DropDownHeight = 110;
+            this.ux_SearchAverableMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ux_SearchAverableMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_SearchAverableMonth.FormattingEnabled = true;
             this.ux_SearchAverableMonth.IntegralHeight = false;
@@ -198,18 +199,18 @@
             "10",
             "11",
             "12"});
-            this.ux_SearchAverableMonth.Location = new System.Drawing.Point(491, 32);
+            this.ux_SearchAverableMonth.Location = new System.Drawing.Point(569, 27);
             this.ux_SearchAverableMonth.Name = "ux_SearchAverableMonth";
-            this.ux_SearchAverableMonth.Size = new System.Drawing.Size(121, 28);
+            this.ux_SearchAverableMonth.Size = new System.Drawing.Size(121, 33);
             this.ux_SearchAverableMonth.TabIndex = 17;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(357, 32);
+            this.label2.Location = new System.Drawing.Point(407, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 20);
+            this.label2.Size = new System.Drawing.Size(156, 25);
             this.label2.TabIndex = 18;
             this.label2.Text = "Averable Month:";
             this.label2.Click += new System.EventHandler(this.Label2_Click);
@@ -220,12 +221,13 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(30, 140);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 20);
+            this.label4.Size = new System.Drawing.Size(118, 25);
             this.label4.TabIndex = 20;
             this.label4.Text = "Num of bed:";
             // 
             // ux_SearchBedNum
             // 
+            this.ux_SearchBedNum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ux_SearchBedNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_SearchBedNum.FormattingEnabled = true;
             this.ux_SearchBedNum.Items.AddRange(new object[] {
@@ -234,21 +236,22 @@
             "3"});
             this.ux_SearchBedNum.Location = new System.Drawing.Point(154, 137);
             this.ux_SearchBedNum.Name = "ux_SearchBedNum";
-            this.ux_SearchBedNum.Size = new System.Drawing.Size(121, 28);
+            this.ux_SearchBedNum.Size = new System.Drawing.Size(121, 33);
             this.ux_SearchBedNum.TabIndex = 21;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(257, 85);
+            this.label5.Location = new System.Drawing.Point(223, 92);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 20);
+            this.label5.Size = new System.Drawing.Size(52, 25);
             this.label5.TabIndex = 22;
             this.label5.Text = "City:";
             // 
             // ux_SearchCityName
             // 
+            this.ux_SearchCityName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ux_SearchCityName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_SearchCityName.FormattingEnabled = true;
             this.ux_SearchCityName.Items.AddRange(new object[] {
@@ -262,9 +265,9 @@
             "Topeka",
             "Lawrence",
             "Manhattan"});
-            this.ux_SearchCityName.Location = new System.Drawing.Point(334, 82);
+            this.ux_SearchCityName.Location = new System.Drawing.Point(281, 89);
             this.ux_SearchCityName.Name = "ux_SearchCityName";
-            this.ux_SearchCityName.Size = new System.Drawing.Size(121, 28);
+            this.ux_SearchCityName.Size = new System.Drawing.Size(121, 33);
             this.ux_SearchCityName.TabIndex = 23;
             // 
             // label6
@@ -273,13 +276,14 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(30, 185);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 20);
+            this.label6.Size = new System.Drawing.Size(182, 25);
             this.label6.TabIndex = 24;
             this.label6.Text = "Time to bus station:";
             // 
             // ux_SearchTimeToStation
             // 
             this.ux_SearchTimeToStation.CausesValidation = false;
+            this.ux_SearchTimeToStation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ux_SearchTimeToStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_SearchTimeToStation.FormattingEnabled = true;
             this.ux_SearchTimeToStation.Items.AddRange(new object[] {
@@ -289,7 +293,7 @@
             "more than 15 min."});
             this.ux_SearchTimeToStation.Location = new System.Drawing.Point(218, 182);
             this.ux_SearchTimeToStation.Name = "ux_SearchTimeToStation";
-            this.ux_SearchTimeToStation.Size = new System.Drawing.Size(121, 28);
+            this.ux_SearchTimeToStation.Size = new System.Drawing.Size(121, 33);
             this.ux_SearchTimeToStation.TabIndex = 25;
             // 
             // ux_SearchReturnButton
@@ -327,7 +331,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(31, 92);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 20);
+            this.label7.Size = new System.Drawing.Size(66, 25);
             this.label7.TabIndex = 29;
             this.label7.Text = "score:";
             // 
@@ -346,9 +350,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(618, 38);
+            this.label8.Location = new System.Drawing.Point(510, 89);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 20);
+            this.label8.Size = new System.Drawing.Size(53, 25);
             this.label8.TabIndex = 31;
             this.label8.Text = "Date";
             this.label8.Click += new System.EventHandler(this.Label8_Click);
@@ -356,6 +360,7 @@
             // date
             // 
             this.date.DropDownHeight = 110;
+            this.date.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date.FormattingEnabled = true;
             this.date.IntegralHeight = false;
@@ -391,9 +396,9 @@
             "29",
             "30",
             "31"});
-            this.date.Location = new System.Drawing.Point(667, 35);
+            this.date.Location = new System.Drawing.Point(569, 83);
             this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(121, 28);
+            this.date.Size = new System.Drawing.Size(121, 33);
             this.date.TabIndex = 32;
             // 
             // label3
@@ -402,12 +407,13 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(330, 140);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 20);
+            this.label3.Size = new System.Drawing.Size(118, 25);
             this.label3.TabIndex = 33;
             this.label3.Text = "Num of bed:";
             // 
             // numbeth
             // 
+            this.numbeth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.numbeth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numbeth.FormattingEnabled = true;
             this.numbeth.Items.AddRange(new object[] {
@@ -415,7 +421,7 @@
             "2"});
             this.numbeth.Location = new System.Drawing.Point(465, 137);
             this.numbeth.Name = "numbeth";
-            this.numbeth.Size = new System.Drawing.Size(121, 28);
+            this.numbeth.Size = new System.Drawing.Size(121, 33);
             this.numbeth.TabIndex = 34;
             // 
             // search
