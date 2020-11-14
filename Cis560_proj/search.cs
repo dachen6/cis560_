@@ -79,7 +79,7 @@ namespace Cis560_proj
             {
                 city = "null";
             }
-            string bus =  ux_SearchTimeToStation.Text;
+            string bus = "N'" + ux_SearchTimeToStation.Text + "'";
             if (bus.Equals(""))
             {
                 bus = "null";
@@ -180,7 +180,7 @@ WHERE(C.CityName = " + city + @" OR " + city + @" IS NULL)
    AND(B.TimeToBusStop = " + bus + @" OR " + bus + @" IS NULL)
 ORDER BY ApartmentID, C.CityName, MonthRent ASC";
 
-            //MessageBox.Show(q);
+            MessageBox.Show(q);
 
             SqlCommand cmd = new SqlCommand(q, cnn);
             SqlDataAdapter a = new SqlDataAdapter(cmd);
