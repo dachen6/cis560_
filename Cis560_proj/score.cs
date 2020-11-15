@@ -15,6 +15,7 @@ namespace Cis560_proj
         public score()
         {
             InitializeComponent();
+            ux_ScoreOK.Enabled = true;
         }
 
         private void Ux_ScoreReturn_Click(object sender, EventArgs e)
@@ -67,9 +68,7 @@ namespace Cis560_proj
                     scores = Convert.ToDouble(dataReader.GetValue(1));
                 }
 
-
-
-                
+               
                 string newScore = $"{((count * scores) + Convert.ToDouble(score)) / (count + 1):0.00}";
                 string newCount = (count + 1).ToString();
 
@@ -81,7 +80,9 @@ namespace Cis560_proj
                 command = new SqlCommand(sql, cnn);
                 adapter.InsertCommand = new SqlCommand(sql, cnn);
                 adapter.InsertCommand.ExecuteNonQuery();
+                MessageBox.Show("Successful grade your apartmrnt");
 
+                ux_ScoreOK.Enabled = false;
 
                 command.Dispose();
                 cnn.Close();

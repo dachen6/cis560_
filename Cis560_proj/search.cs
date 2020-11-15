@@ -99,7 +99,7 @@ namespace Cis560_proj
             {
                  balcony = "1";
             }
-            if (ux_SearchWithBalcony.Checked)
+            if (ux_SearchWithWasherDryer.Checked)
             {
                  washdryer = "2";
             }

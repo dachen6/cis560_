@@ -176,7 +176,9 @@ namespace Cis560_proj
                     adapter.InsertCommand.ExecuteNonQuery();
                     command.Dispose();
 
-                    MessageBox.Show(sql);
+
+
+
 
                     sql = "";
                     output = "";
@@ -197,8 +199,7 @@ namespace Cis560_proj
                     }
 
                 }
-                MessageBox.Show(output+ OName+ Tel);
-                
+
 
                 command.Dispose();
                 cnn.Close();
@@ -216,7 +217,8 @@ namespace Cis560_proj
                 command = new SqlCommand(sql, cnn);
                 adapter.InsertCommand = new SqlCommand(sql, cnn);
                 adapter.InsertCommand.ExecuteNonQuery();
-                MessageBox.Show(output);
+
+
 
                 command.Dispose();
                 cnn.Close();
@@ -237,7 +239,7 @@ namespace Cis560_proj
                 {
                     output = dataReader.GetValue(0).ToString();
                 }
-                MessageBox.Show(output);
+
                 dataReader.Close();
                 command.Dispose();
                 cnn.Close();
@@ -255,7 +257,7 @@ namespace Cis560_proj
                 command = new SqlCommand(sql, cnn);
                 adapter.InsertCommand = new SqlCommand(sql, cnn);
                 adapter.InsertCommand.ExecuteNonQuery();
-                MessageBox.Show(output);
+
 
                 command.Dispose();
                 cnn.Close();

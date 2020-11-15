@@ -36,8 +36,6 @@ namespace Cis560_proj
         private void Ux_LogSignIn_Click(object sender, EventArgs e)
         {
 
-            try
-            {
                 string email = "N'" + ux_LogUserEmail.Text + "'";
                 string password = ux_LogPassword.Text;
 
@@ -54,7 +52,7 @@ namespace Cis560_proj
 
 
                 sql = "select * from proj.Customers C ";
-                sql += "where C.Email = " + email + " and C.PasswordHash = " + password.GetHashCode().ToString() + ";";
+                sql += "where C.Email = " + email + " and C.PasswordHash = " + password + ";";
 
 
 
@@ -65,6 +63,16 @@ namespace Cis560_proj
                 {
                     output = dataReader.GetValue(0).ToString();
                 }
+            if (output.Equals(""))
+            {
+                dataReader.Close();
+                command.Dispose();
+                cnn.Close();
+
+                MessageBox.Show("Invaild email or password");
+            }
+            else
+            {
                 dataReader.Close();
                 command.Dispose();
                 cnn.Close();
@@ -72,10 +80,8 @@ namespace Cis560_proj
                 CusPagecs cs = new CusPagecs();
                 cs.Show();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("wrong username or password");
-            }
+            
+
 
         }
     }
