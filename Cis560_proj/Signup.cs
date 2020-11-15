@@ -66,7 +66,7 @@ namespace Cis560_proj
         private void Ux_SignUpReturn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            begincs be = new begincs();
+            customer_logcs be = new customer_logcs();
             be.Show();
            
         }
