@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.ux_SearchLowPrice = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.ux_SearchHighPrice = new System.Windows.Forms.TextBox();
             this.ux_SearchWithBalcony = new System.Windows.Forms.CheckBox();
             this.ux_SearchWithWasherDryer = new System.Windows.Forms.CheckBox();
@@ -49,9 +48,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.ux_SearchTimeToStation = new System.Windows.Forms.ComboBox();
             this.ux_SearchReturnButton = new System.Windows.Forms.Button();
-            this.ux_SelectLogin = new System.Windows.Forms.Button();
-            this.selectnum = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.result = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.date = new System.Windows.Forms.ComboBox();
@@ -68,17 +64,9 @@
             this.ux_SearchLowPrice.Size = new System.Drawing.Size(100, 25);
             this.ux_SearchLowPrice.TabIndex = 0;
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(98, 92);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 25);
-            this.textBox3.TabIndex = 2;
-            // 
             // ux_SearchHighPrice
             // 
-            this.ux_SearchHighPrice.Location = new System.Drawing.Point(229, 30);
+            this.ux_SearchHighPrice.Location = new System.Drawing.Point(252, 30);
             this.ux_SearchHighPrice.Multiline = true;
             this.ux_SearchHighPrice.Name = "ux_SearchHighPrice";
             this.ux_SearchHighPrice.Size = new System.Drawing.Size(100, 25);
@@ -141,7 +129,9 @@
             // 
             // ux_SearchResultTable
             // 
+            this.ux_SearchResultTable.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ux_SearchResultTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ux_SearchResultTable.GridColor = System.Drawing.SystemColors.ControlLightLight;
             this.ux_SearchResultTable.Location = new System.Drawing.Point(49, 357);
             this.ux_SearchResultTable.Name = "ux_SearchResultTable";
             this.ux_SearchResultTable.RowHeadersWidth = 51;
@@ -151,11 +141,11 @@
             // ux_SearchSelectButton
             // 
             this.ux_SearchSelectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ux_SearchSelectButton.Location = new System.Drawing.Point(438, 281);
+            this.ux_SearchSelectButton.Location = new System.Drawing.Point(515, 281);
             this.ux_SearchSelectButton.Name = "ux_SearchSelectButton";
-            this.ux_SearchSelectButton.Size = new System.Drawing.Size(75, 35);
+            this.ux_SearchSelectButton.Size = new System.Drawing.Size(100, 35);
             this.ux_SearchSelectButton.TabIndex = 14;
-            this.ux_SearchSelectButton.Text = "Select";
+            this.ux_SearchSelectButton.Text = "Sign in";
             this.ux_SearchSelectButton.UseVisualStyleBackColor = true;
             this.ux_SearchSelectButton.Click += new System.EventHandler(this.ux_SearchSelectButton_Click);
             // 
@@ -173,11 +163,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(204, 30);
+            this.label1.Location = new System.Drawing.Point(213, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 25);
+            this.label1.Size = new System.Drawing.Size(36, 25);
             this.label1.TabIndex = 16;
-            this.label1.Text = "-";
+            this.label1.Text = "To";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // ux_SearchAverableMonth
             // 
@@ -208,11 +199,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(407, 30);
+            this.label2.Location = new System.Drawing.Point(387, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 25);
+            this.label2.Size = new System.Drawing.Size(160, 25);
             this.label2.TabIndex = 18;
-            this.label2.Text = "Averable Month:";
+            this.label2.Text = "Averiable Month:";
             this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // label4
@@ -221,9 +212,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(30, 140);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 25);
+            this.label4.Size = new System.Drawing.Size(164, 25);
             this.label4.TabIndex = 20;
-            this.label4.Text = "Num of bed:";
+            this.label4.Text = "Num of Bedroom:";
             // 
             // ux_SearchBedNum
             // 
@@ -234,7 +225,7 @@
             "1",
             "2",
             "3"});
-            this.ux_SearchBedNum.Location = new System.Drawing.Point(154, 137);
+            this.ux_SearchBedNum.Location = new System.Drawing.Point(200, 132);
             this.ux_SearchBedNum.Name = "ux_SearchBedNum";
             this.ux_SearchBedNum.Size = new System.Drawing.Size(121, 33);
             this.ux_SearchBedNum.TabIndex = 21;
@@ -243,7 +234,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(223, 92);
+            this.label5.Location = new System.Drawing.Point(40, 83);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 25);
             this.label5.TabIndex = 22;
@@ -265,7 +256,7 @@
             "Topeka",
             "Lawrence",
             "Manhattan"});
-            this.ux_SearchCityName.Location = new System.Drawing.Point(281, 89);
+            this.ux_SearchCityName.Location = new System.Drawing.Point(128, 80);
             this.ux_SearchCityName.Name = "ux_SearchCityName";
             this.ux_SearchCityName.Size = new System.Drawing.Size(121, 33);
             this.ux_SearchCityName.TabIndex = 23;
@@ -276,9 +267,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(30, 185);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(182, 25);
+            this.label6.Size = new System.Drawing.Size(188, 25);
             this.label6.TabIndex = 24;
-            this.label6.Text = "Time to bus station:";
+            this.label6.Text = "Time to Bus Station:";
             // 
             // ux_SearchTimeToStation
             // 
@@ -301,48 +292,20 @@
             this.ux_SearchReturnButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_SearchReturnButton.Location = new System.Drawing.Point(656, 281);
             this.ux_SearchReturnButton.Name = "ux_SearchReturnButton";
-            this.ux_SearchReturnButton.Size = new System.Drawing.Size(75, 35);
+            this.ux_SearchReturnButton.Size = new System.Drawing.Size(97, 35);
             this.ux_SearchReturnButton.TabIndex = 26;
-            this.ux_SearchReturnButton.Text = "return";
+            this.ux_SearchReturnButton.Text = "Return";
             this.ux_SearchReturnButton.UseVisualStyleBackColor = true;
             this.ux_SearchReturnButton.Click += new System.EventHandler(this.ux_SearchReturnButton_Click);
-            // 
-            // ux_SelectLogin
-            // 
-            this.ux_SelectLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ux_SelectLogin.Location = new System.Drawing.Point(553, 281);
-            this.ux_SelectLogin.Name = "ux_SelectLogin";
-            this.ux_SelectLogin.Size = new System.Drawing.Size(75, 35);
-            this.ux_SelectLogin.TabIndex = 27;
-            this.ux_SelectLogin.Text = "Login";
-            this.ux_SelectLogin.UseVisualStyleBackColor = true;
-            // 
-            // selectnum
-            // 
-            this.selectnum.Location = new System.Drawing.Point(281, 281);
-            this.selectnum.Multiline = true;
-            this.selectnum.Name = "selectnum";
-            this.selectnum.Size = new System.Drawing.Size(100, 25);
-            this.selectnum.TabIndex = 28;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(31, 92);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 25);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "score:";
             // 
             // result
             // 
             this.result.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.result.Location = new System.Drawing.Point(67, 281);
             this.result.Name = "result";
-            this.result.Size = new System.Drawing.Size(75, 35);
+            this.result.Size = new System.Drawing.Size(98, 35);
             this.result.TabIndex = 30;
-            this.result.Text = "Result";
+            this.result.Text = "Search";
             this.result.UseVisualStyleBackColor = true;
             this.result.Click += new System.EventHandler(this.result_Click);
             // 
@@ -407,9 +370,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(330, 140);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 25);
+            this.label3.Size = new System.Drawing.Size(169, 25);
             this.label3.TabIndex = 33;
-            this.label3.Text = "Num of bed:";
+            this.label3.Text = "Num of Bethroom:";
             // 
             // numbeth
             // 
@@ -419,7 +382,7 @@
             this.numbeth.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.numbeth.Location = new System.Drawing.Point(465, 137);
+            this.numbeth.Location = new System.Drawing.Point(519, 137);
             this.numbeth.Name = "numbeth";
             this.numbeth.Size = new System.Drawing.Size(121, 33);
             this.numbeth.TabIndex = 34;
@@ -434,9 +397,6 @@
             this.Controls.Add(this.date);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.result);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.selectnum);
-            this.Controls.Add(this.ux_SelectLogin);
             this.Controls.Add(this.ux_SearchReturnButton);
             this.Controls.Add(this.ux_SearchTimeToStation);
             this.Controls.Add(this.label6);
@@ -456,7 +416,6 @@
             this.Controls.Add(this.ux_SearchWithWasherDryer);
             this.Controls.Add(this.ux_SearchWithBalcony);
             this.Controls.Add(this.ux_SearchHighPrice);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.ux_SearchLowPrice);
             this.Name = "search";
             this.Text = "search";
@@ -470,7 +429,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox ux_SearchLowPrice;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox ux_SearchHighPrice;
         private System.Windows.Forms.CheckBox ux_SearchWithBalcony;
         private System.Windows.Forms.CheckBox ux_SearchWithWasherDryer;
@@ -489,9 +447,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox ux_SearchTimeToStation;
         private System.Windows.Forms.Button ux_SearchReturnButton;
-        private System.Windows.Forms.Button ux_SelectLogin;
-        private System.Windows.Forms.TextBox selectnum;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button result;
         private System.Windows.Forms.Label label8;
         public System.Windows.Forms.ComboBox date;

@@ -46,9 +46,10 @@ namespace Cis560_proj
 
         private void Begin_Click(object sender, EventArgs e)
         {
+            this.Hide();
             begincs b = new begincs();
             b.Show();
-            this.Hide();
+           
         }
 
         private void ux_AptSubmit_Click(object sender, EventArgs e)
@@ -144,9 +145,11 @@ namespace Cis560_proj
                 SqlCommand command;
                 SqlDataReader dataReader;
                 SqlDataAdapter adapter = new SqlDataAdapter();
-                string sql, output = "";
-
-                sql = "select O.OwnerID from proj.Owners O ";
+                string sql = "";
+                string output= "";
+                string OName = "";
+                string Tel = "";
+                sql = "select O.OwnerID, O.[Name], O.Tel from proj.Owners O ";
                 sql += "where O.Email = " + email + ";";
 
                 command = new SqlCommand(sql, cnn);
@@ -155,9 +158,48 @@ namespace Cis560_proj
                 while (dataReader.Read())
                 {
                     output = dataReader.GetValue(0).ToString();
+                    OName = dataReader.GetValue(1).ToString();
+                    Tel = dataReader.GetValue(2).ToString();
                 }
-                MessageBox.Show(output);
+
+
+
                 dataReader.Close();
+
+                if(output.Equals(""))
+                {
+                    sql = "INSERT proj.Owners([Name], Email, Tel) VALUES(";
+                    sql += "N'" + ux_AptOwnerName.Text + "' , N'" + ux_AptOwnerEmail.Text + "' ," + ux_AptOwnerTel.Text + ");";
+
+                    command = new SqlCommand(sql, cnn);
+                    adapter.InsertCommand = new SqlCommand(sql, cnn);
+                    adapter.InsertCommand.ExecuteNonQuery();
+                    command.Dispose();
+
+                    MessageBox.Show(sql);
+
+                    sql = "";
+                    output = "";
+                    OName = "";
+                    Tel = "";
+
+                    sql = "select O.OwnerID, O.[Name], O.Tel from proj.Owners O ";
+                    sql += "where O.Email = " + email + ";";
+
+                    command = new SqlCommand(sql, cnn);
+                    dataReader = command.ExecuteReader();
+
+                    while (dataReader.Read())
+                    {
+                        output = dataReader.GetValue(0).ToString();
+                        OName = dataReader.GetValue(1).ToString();
+                        Tel = dataReader.GetValue(2).ToString();
+                    }
+
+                }
+                MessageBox.Show(output+ OName+ Tel);
+                
+
                 command.Dispose();
                 cnn.Close();
                 string ownerid = output;

@@ -19,9 +19,10 @@ namespace Cis560_proj
 
         private void ux_CusReturn_Click(object sender, EventArgs e)
         {
+            this.Hide();
             begincs b = new begincs();
             b.Show();
-            this.Hide();
+            
         }
 
         private void Ux_CusApartmentID_TextChanged(object sender, EventArgs e)
@@ -38,7 +39,7 @@ namespace Cis560_proj
             cnn = new SqlConnection(connetionString);
             cnn.Open();
 
-            string q = "select * from proj.Apartments a where a.ApartmentID = " + id;
+            string q = "select [ApartmentID],[BuildingID],[ReviewCount],[AvgReviewScores],[AptNumber],[NumBed],[NumBath],[MonthRent],[Deposit],[Sizesqf],[AvailableDate],[NumOfParking],[FloorType],[FloorColor],[CarpetType],[CarpetColor] from proj.Apartments a where a.ApartmentID = " + id;
 
             string q1 = "  select b.[Address], b.TotalFloors, b.YearBuilt,b.HeatingType from proj.Buildings b inner join proj.Apartments a on a.BuildingID = b.BuildingID where a.ApartmentID = " + id;
 

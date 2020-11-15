@@ -20,9 +20,10 @@ namespace Cis560_proj
 
         private void Ux_LogReturn_Click(object sender, EventArgs e)
         {
+            this.Hide();
             begincs sch = new begincs();
             sch.ShowDialog();
-            this.Hide();
+            
         }
 
         private void Ux_LogSignUp_Click(object sender, EventArgs e)
@@ -64,7 +65,6 @@ namespace Cis560_proj
                 {
                     output = dataReader.GetValue(0).ToString();
                 }
-                MessageBox.Show(output);
                 dataReader.Close();
                 command.Dispose();
                 cnn.Close();

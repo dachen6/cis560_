@@ -40,7 +40,7 @@
             this.ux_BeginRent.Name = "ux_BeginRent";
             this.ux_BeginRent.Size = new System.Drawing.Size(100, 75);
             this.ux_BeginRent.TabIndex = 1;
-            this.ux_BeginRent.Text = "rent";
+            this.ux_BeginRent.Text = "Rent";
             this.ux_BeginRent.UseVisualStyleBackColor = true;
             this.ux_BeginRent.Click += new System.EventHandler(this.Rent_Click);
             // 
@@ -49,9 +49,9 @@
             this.ux_BeginLease.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ux_BeginLease.Location = new System.Drawing.Point(95, 102);
             this.ux_BeginLease.Name = "ux_BeginLease";
-            this.ux_BeginLease.Size = new System.Drawing.Size(100, 75);
+            this.ux_BeginLease.Size = new System.Drawing.Size(111, 75);
             this.ux_BeginLease.TabIndex = 3;
-            this.ux_BeginLease.Text = "lease";
+            this.ux_BeginLease.Text = "Lease";
             this.ux_BeginLease.UseVisualStyleBackColor = true;
             this.ux_BeginLease.Click += new System.EventHandler(this.ux_BeginLease_Click);
             // 
@@ -62,7 +62,7 @@
             this.ux_BeginMore.Name = "ux_BeginMore";
             this.ux_BeginMore.Size = new System.Drawing.Size(100, 75);
             this.ux_BeginMore.TabIndex = 4;
-            this.ux_BeginMore.Text = "more";
+            this.ux_BeginMore.Text = "More Info";
             this.ux_BeginMore.UseVisualStyleBackColor = true;
             this.ux_BeginMore.Click += new System.EventHandler(this.More_Click);
             // 

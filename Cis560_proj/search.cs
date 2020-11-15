@@ -80,7 +80,7 @@ namespace Cis560_proj
                 city = "null";
             }
             string bus = "N'" + ux_SearchTimeToStation.Text + "'";
-            if (bus.Equals(""))
+            if (bus.Equals("N''"))
             {
                 bus = "null";
             }
@@ -172,7 +172,7 @@ namespace Cis560_proj
               ))
    )
 SELECT Q.ApartmentID AS ApartmentID, B.Address AS Address, CityName AS City, Q.NumBed AS NumOfBedroom, Q.NumBath AS NumOfBathroom, 
-       Q.MonthRent AS MonthRent, Q.AvailableDate AS AvailableDate, Q.AvgReviewScores AS AvgReviewScores, B.TimeToBusStop
+        B.TimeToBusStop,  Q.AvailableDate AS AvailableDate, Q.MonthRent AS MonthRent, Q.AvgReviewScores AS AvgReviewScores
 FROM QCTE Q
    INNER JOIN Proj.Buildings B ON Q.BuildingID = B.BuildingID
    INNER JOIN Proj.Cities C ON B.CityID = C.CityID
@@ -180,7 +180,6 @@ WHERE(C.CityName = " + city + @" OR " + city + @" IS NULL)
    AND(B.TimeToBusStop = " + bus + @" OR " + bus + @" IS NULL)
 ORDER BY ApartmentID, C.CityName, MonthRent ASC";
 
-            MessageBox.Show(q);
 
             SqlCommand cmd = new SqlCommand(q, cnn);
             SqlDataAdapter a = new SqlDataAdapter(cmd);
@@ -203,6 +202,11 @@ ORDER BY ApartmentID, C.CityName, MonthRent ASC";
         }
 
         private void Label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

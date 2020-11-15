@@ -342,7 +342,7 @@
             // ux_AptReturn
             // 
             this.ux_AptReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ux_AptReturn.Location = new System.Drawing.Point(644, 493);
+            this.ux_AptReturn.Location = new System.Drawing.Point(646, 493);
             this.ux_AptReturn.Name = "ux_AptReturn";
             this.ux_AptReturn.Size = new System.Drawing.Size(100, 75);
             this.ux_AptReturn.TabIndex = 42;
